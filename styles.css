@@ -1,152 +1,85 @@
-/* Reset default margin and padding for all elements */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set the font and background for the entire body */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    padding-top: 20px;
-}
-
-/* Main container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header Section */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 1.1rem;
-}
-
-header a {
-    color: #f39c12;
-    text-decoration: none;
-}
-
-header a:hover {
-    text-decoration: underline;
-}
-
-/* Section Titles */
-h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-}
-
-/* General Section Styling */
-section {
-    margin-bottom: 30px;
-    padding: 20px 0;
-}
-
-section ul {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 20px;
-}
-
-section ul li {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-/* Job and Project Sections */
-.job, .project {
-    margin-bottom: 20px;
-}
-
-.job h3, .project h3 {
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.job p, .project p {
-    font-size: 1rem;
-    color: #777;
-}
-
-.project a {
-    color: #f39c12;
-    text-decoration: none;
-}
-
-.project a:hover {
-    text-decoration: underline;
-}
-
-/* Certifications and Additional Information */
-ul li {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 50px;
-}
-
-footer p {
-    font-size: 1rem;
-}
-
-/* Responsive Design for Smaller Screens */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
+/* Color variables */
+:root {
+    --white-color: #fff;
+    --bg-color: #fff;
+    --gray-color: #ccc;
+  }
+  /* Changing background color */
+  body {
+    background: var(--bg-color) !important;
+  }
+  /* Changing link color */
+  .nav-item .nav-link {
+    color: var(--white-color);
+  }
+  /* Hero section background image */
+  .hero {
+    height: 100vh;
+    background-image: url("../images/home-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 60% 0%;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  #skills i {
+    height: 100px;
+    width: 100px;
+  }
+  #portfolio img {
+    height: 300px;
+    object-fit: cover;
+  }
+  #about .img,
+  #about img,
+  .hire-text h2 {
+    position: relative;
+  }
+  /* Timeline background line */
+  #about .img::before {
+    content: "";
+    left: 50%;
+    width: 4px;
+    position: absolute;
+    height: calc(100% + 140px);
+    background: var(--gray-color);
+  }
+  #about img,
+  #about .hire-text h2 {
+    width: 140px;
+  }
+  #about .hire-text h2 {
+    height: 140px;
+  }
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+  footer .social-icons a {
+    width: 30px;
+    height: 30px;
+  }
+  #cv img {
+    width: 230px;
+  }
+  /* Contact section background image */
+  #contact {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url("../images/contact-bg.jpeg");
+  }
+  @media screen and (max-width: 990px) {
+    #skills .card {
+      width: calc(100% / 2 - 10px) !important;
     }
-
-    header p {
-        font-size: 1rem;
+  }
+  @media screen and (max-width: 668px) {
+    #skills .card,
+    #portfolio .card-wrapper {
+      width: 100% !important;
     }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    section {
-        padding: 15px 0;
-    }
-
-    section ul li {
-        font-size: 1rem;
-    }
-
-    .job h3, .project h3 {
-        font-size: 1.3rem;
-    }
-}
-
-/* Links hover effect */
-a:hover {
-    color: #f39c12;
-    text-decoration: underline;
-}
+   #about .hire-text h2 {
+     height: 70px;
+     width: 70px;
+   }
+  }
